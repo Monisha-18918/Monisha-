@@ -1,0 +1,29 @@
+// Mobile Navigation
+
+const hamburger = document.querySelector('.hamburger');
+
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+
+    navLinks.classList.toggle('active');
+
+});
+
+// Close mobile navigation when clicking on a link
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+
+    link.addEventListener('click', () => {
+
+        navLinks.classList.remove('active');
+
+    });
+
+});
+
+// Form submission
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+
+    e.preventDefault();
